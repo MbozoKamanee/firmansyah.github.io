@@ -21,9 +21,9 @@
         </div>
         
         <nav class="main-nav">
-          <a href="index.php" class="nav-link">Beranda</a>
-          <a href="sejarah.php" class="nav-link">Sejarah</a>
-          <a href="pariwisata.php" class="nav-link active">Pariwisata</a>
+          <a href="index.html" class="nav-link">Beranda</a>
+          <a href="sejarah.html" class="nav-link">Sejarah</a>
+          <a href="pariwisata.html" class="nav-link active">Pariwisata</a>
           
         </nav>
          <div class="header-actions">
