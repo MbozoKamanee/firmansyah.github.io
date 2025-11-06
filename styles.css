@@ -1,11 +1,20 @@
-/* === Header Baru (Sejajar ke Kanan) === */
-.header {
-  background: linear-gradient(90deg, #211724ff, #2563eb);
-  color: #ffffff;
-  padding: 1rem 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
+<!DOCTYPE html>
 
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBOZOKAMANE</title>
+  <style>
+    /* === HEADER === */
+    .header {
+      background: linear-gradient(90deg, #211724, #2563eb);
+      color: white;
+      padding: 0.8rem 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+```
 .header-container {
   max-width: 1200px;
   margin: auto;
@@ -18,70 +27,199 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-}
-
-.logo-text {
-  font-size: 1.4rem;
+  gap: 8px;
   font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
 }
 
-/* ====== NAVIGATION SEJAJAR KE KANAN ====== */
+/* === NAVIGATION === */
 .main-nav {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-left: auto;
 }
 
 .nav-link {
-  color: #f5f6f3;
-  font-weight: 500;
+  color: #ffffff;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #fd4747;
+  color: #ffeb3b;
 }
 
-/* Logout ikut sejajar dengan menu */
+/* === LOGOUT BUTTON === */
 .logout-button {
-  background: transparent;
-  color: #f5f6f3;
-  padding: 0.4rem 1rem;
-  border: 2px solid #f5f6f3;
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .logout-button:hover {
-  background: #f5f6f3;
-  color: #1e293b;
+  background: #cc0000;
 }
 
-/* === RESPONSIVE UNTUK HP === */
+/* === BODY CONTENT === */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(to bottom, #6d8dad, #ffffff);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #1f2937;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+  text-align: left;
+}
+
+.card-content h3 {
+  margin: 0;
+  color: #1e3a8a;
+}
+
+.card-content p {
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+/* === FOOTER === */
+footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
 
   .main-nav {
     flex-direction: column;
-    margin-left: 0;
     gap: 10px;
-    margin-top: 10px;
   }
 
-  .nav-link, .logout-button {
+  .nav-link,
+  .logout-button {
     font-size: 14px;
   }
-
-  .logo-text {
-    font-size: 1.2rem;
-  }
 }
+```
+
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">📄 MBOZOKAMANE</div>
+      <nav class="main-nav">
+        <a href="#" class="nav-link">Beranda</a>
+        <a href="#" class="nav-link">Sejarah</a>
+        <a href="#" class="nav-link">Pariwisata</a>
+        <a href="#" class="logout-button">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+
+  <div class="content">
+    <h2>Selamat Datang Di</h2>
+    <h1>CHATBOT MBOZOKAMANE</h1>
+
+```
+<div class="card-container">
+  <div class="card">
+    <img src="bupati.jpg" alt="Bupati Bima">
+    <div class="card-content">
+      <h3>Bupati Bima</h3>
+      <p>Bupati dan wakil Bupati Bima saat ini</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="rimpubima.jpg" alt="Rimpu Bima">
+    <div class="card-content">
+      <h3>Rimpu Bima</h3>
+      <p>Pakaian adat wanita Bima yang mencerminkan identitas dan nilai-nilai budaya.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="nelayan.jpg" alt="Nelayan Bima">
+    <div class="card-content">
+      <h3>Nelayan Bima</h3>
+      <p>Kehidupan nelayan di pesisir pantai Sangiang “Bima”.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="petani.jpg" alt="Petani Bima">
+    <div class="card-content">
+      <h3>Petani Bima</h3>
+      <p>Kegiatan petani wijen di bawah kaki gunung Sangiang “Bima”.</p>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2025 MBOZOKAMANE
+  </footer>
+</body>
+</html>
