@@ -210,6 +210,58 @@ body {
   color: #f8fafc; /* Warna biru muda, misalnya */
 }
 
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 10px 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr; /* 1 kolom di HP */
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .hero-section {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .logout-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
 .judul h1 {
   color: #fd4d47; /* Warna kuning cerah */
 }
