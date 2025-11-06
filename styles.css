@@ -1,27 +1,9 @@
-/* === Reset & Base Style === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #11aee3;
-  color: #040b14;
-  line-height: 1.6;
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* === Header === */
+/* === Header Baru (Sejajar ke Kanan) === */
 .header {
   background: linear-gradient(90deg, #211724ff, #2563eb);
   color: #ffffff;
   padding: 1rem 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  position: sticky;
-  top: 0;
-  z-index: 999;
 }
 
 .header-container {
@@ -31,8 +13,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  flex-wrap: wrap;
-  gap: 0.8rem;
 }
 
 .logo {
@@ -47,10 +27,12 @@ body {
   letter-spacing: 1px;
 }
 
+/* ====== NAVIGATION SEJAJAR KE KANAN ====== */
 .main-nav {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto;
 }
 
 .nav-link {
@@ -64,191 +46,42 @@ body {
   color: #fd4747;
 }
 
+/* Logout ikut sejajar dengan menu */
 .logout-button {
-  background: #fa1515;
-  color: #fff;
+  background: transparent;
+  color: #f5f6f3;
   padding: 0.4rem 1rem;
+  border: 2px solid #f5f6f3;
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .logout-button:hover {
-  background: #fbbf24;
+  background: #f5f6f3;
+  color: #1e293b;
 }
 
-/* === Hero Section === */
-.hero-section {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: linear-gradient(180deg, #537393, #e0f2fe);
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1e3a8a;
-  margin-bottom: 0.5rem;
-}
-
-/* === Card Grid === */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
-}
-
-.card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 16px rgba(168, 45, 45, 0.3);
-}
-
-.card-image img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  cursor: pointer;
-  border-bottom: 3px solid #e5e7eb;
-}
-
-.card-content {
-  padding: 1rem;
-  text-align: left;
-}
-
-.card-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
-}
-
-.card-description {
-  font-size: 0.95rem;
-  color: #6b7280;
-}
-
-/* === Footer === */
-.footer {
-  background: #19201d;
-  color: #cbd5e1;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-.footer-container p {
-  margin: 0.3rem 0;
-  font-size: 0.9rem;
-}
-
-/* === Overlay Fullscreen Image === */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.overlay img.fullscreen {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(255,255,255,0.2);
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-/* === RESPONSIVE DESIGN === */
+/* === RESPONSIVE UNTUK HP === */
 @media (max-width: 768px) {
-  .logo-text {
-    font-size: 1.1rem;
-  }
-
-  .main-nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
-  }
-
-  .nav-link {
-    font-size: 0.95rem;
-  }
-
-  .hero-section {
-    padding: 1.5rem 1rem;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .card-image img {
-    height: 160px;
-  }
-
-  .card-title {
-    font-size: 1rem;
-  }
-
-  .card-description {
-    font-size: 0.85rem;
-  }
-
-  .footer-container p {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
   .header-container {
     flex-direction: column;
     align-items: center;
-    text-align: center;
   }
 
   .main-nav {
-    gap: 0.4rem;
+    flex-direction: column;
+    margin-left: 0;
+    gap: 10px;
+    margin-top: 10px;
   }
 
-  .card-grid {
-    gap: 1rem;
+  .nav-link, .logout-button {
+    font-size: 14px;
   }
 
-  .card-image img {
-    height: 140px;
-  }
-
-  .logout-button {
-    padding: 0.3rem 0.8rem;
-    font-size: 0.85rem;
+  .logo-text {
+    font-size: 1.2rem;
   }
 }
