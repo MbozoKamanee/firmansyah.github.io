@@ -1,0 +1,14 @@
+/* chatbot.css */
+df-messenger {
+    --df-messenger-font-color: #f31414;
+    --df-messenger-font-family: "Inter", sans-serif;
+    --df-messenger-chat-background: #666799;
+    --df-messenger-button-titlebar-color: #1e3a8a;
+    --df-messenger-button-titlebar-font-color: #ffffff;
+    --df-messenger-send-icon: #1d4ed8;
+    --df-messenger-user-message: #1d4ed8;
+    --df-messenger-bot-message: #e7f0e2;
+    --df-messenger-button-size: 56px;
+    z-index: 100;
+  }
+  
